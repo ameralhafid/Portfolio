@@ -4,10 +4,10 @@ import { useForm } from "react-hook-form";
 
 const Contacts = () => {
   const [successMessage, setSuccessMessage] = useState("");
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
-  const serviceID = "service_ID";
-  const templateID = "template_ID";
+  const serviceID = "service_rxv95bx";
+  const templateID = "template_nnnqw6p";
   const userID = "user_ICffHtKJ6iAAUIMyhb9Nm";
 
   const onSubmit = (data, r) => {
@@ -16,7 +16,7 @@ const Contacts = () => {
       templateID,
       {
         name: data.name,
-        phone: data.phone,
+        contact_number: data.contact_number,
         email: data.email,
         subject: data.subject,
         description: data.description
@@ -47,12 +47,13 @@ const Contacts = () => {
               {/* NAME INPUT */}
               <div className="text-center">
                 <input
+                  for="name"
                   type="text"
                   className="form-control"
                   placeholder="Name"
-                  name="name"
-                  ref={
-                    register({
+                  name="user_name"
+                  {
+                    ...register('test', {
                       required: "Please enter your name",
                       maxLength: {
                         value: 20,
@@ -63,39 +64,35 @@ const Contacts = () => {
                 />
                 <div className="line"></div>
               </div>
-              <span className="error-message">
-                {errors.name && errors.name.message}
-              </span>
               {/* PHONE INPUT */}
               <div className="text-center">
                 <input
+                for="number"
                   type="text"
                   className="form-control"
                   placeholder="Phone Number"
-                  name="phone"
-                  ref={
-                    register({
+                  name="number"
+                  {
+                    ...register('test', {
                       required: "Please add your phone number",
                     })
                   }
                 />
                 <div className="line"></div>
               </div>
-              <span className="error-message">
-                {errors.phone && errors.phone.message}
-              </span>
               {/* EMAIL INPUT */}
               <div className="text-center">
                 <input
+                  for="email"
                   type="email"
                   className="form-control"
                   placeholder="Email"
                   name="email"
-                  ref={
-                    register({
+                  {
+                    ...register('test', {
                       required: "Please provide you email",
                       pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        value: 50,
                         message: "invalid Email"
                       }
                     })
@@ -103,47 +100,41 @@ const Contacts = () => {
                 />
                 <div className="line"></div>
               </div>
-              <span className="error-message">
-                {errors.email && errors.email.message}
-              </span>
               {/* SUBJECT INPUT */}
               <div className="text-center">
                 <input
+                  for="subject"
                   type="text"
                   className="form-control"
                   placeholder="Subject"
                   name="subject"
-                  ref={
-                    register({
+                  {
+                    ...register('test', {
                       required: "OOPS, you forget to add the subject.",
                     })
                   }
                 />
                 <div className="line"></div>
               </div>
-              <span className="error-message">
-                {errors.subject && errors.subject.message}
-              </span>
-            </div>
+              </div>
             <div className="col-md-6 col-xs-12">
               {/* DESCRIPTION */}
               <div className="text-center">
                 <textarea
+                 for="description"
                   type="text"
                   className="form-control"
                   placeholder="Please describe shortly you project..."
                   name="description"
-                  ref={
-                    register({
+                  {
+                    ...register('test', {
                       required: "Please describe shortly your project needs...",
                     })
                   }
                 ></textarea>
                 <div className="line"></div>
               </div>
-              <span className="error-message">
-                {errors.description && errors.description.message}
-              </span>
+              
               <button className="btn-main-offer contact-btn" type="submit">contact me</button>
             </div>
           </div>

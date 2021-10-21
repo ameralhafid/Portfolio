@@ -42,6 +42,7 @@ function App() {
       <Experience />
       <Portfolio />
       <Testimonials />
+      <Contacts />
       <Footer />
     </>
   );
