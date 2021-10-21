@@ -70,7 +70,7 @@ const Portfolio = () => {
         <img className="portfolio-image-popupbox" src={portfolio} alt="Portfolio Project..." />
         <p>my portfolio</p>
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <b>Demo:</b> <a className="hyper-link" onClick={() => window.open("https://portfolio-9jpkufkrw-amour.vercel.app", "_blank")}>https://portfolio-rea-and-material-ui.herokuapp.com/</a>
+        <b>Demo:</b> <a className="hyper-link" onClick={() => window.open("https://portfolio-9jpkufkrw-amour.vercel.app", "_blank")}>https://portfolio-9jpkufkrw-amour.vercel.app</a>
         <br />
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/ameralhafid/Portfolio", "_blank")}>https://github.com/ameralhafid/Portfolio</a>
